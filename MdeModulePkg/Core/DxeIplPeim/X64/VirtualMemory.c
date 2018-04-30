@@ -806,12 +806,6 @@ CreateIdentityMappingPageTables (
   }
 
   //
-  // Protect the page table by marking the memory used for page table to be
-  // read-only.
-  //
-  EnablePageTableProtection ((UINTN)PageMap, TRUE);
-
-  //
   // Set IA32_EFER.NXE if necessary.
   //
   if (IsEnableNonExecNeeded ()) {
